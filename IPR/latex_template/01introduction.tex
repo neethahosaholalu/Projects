@@ -1,0 +1,50 @@
+%!TEX root = template.tex
+%This little note pointing to the root file allowes your ide to compile the correct file instead this sub file. Once you change the title you need to change this as well.
+
+\chapter{Introduction Chapter}
+
+Often times it is not well liked when you have text under a chapter that is not in its own section. You get these with \verb!"\chapter{text}"!
+
+\section{Introduction Section}
+
+If you look into the \textit{template.tex} file you will find - near the top - statements about the spacing (and content) of these titles. You can play around with them. Worst case you break them and have to revert to the previous version :)
+
+You get sections by \verb!"\section{text}"!
+
+\subsection{Introduction Subsection very specific}
+Created by \verb!"\subsection{text}"!
+
+Subsections are some times avoided, to each their own. If you want you can even have subsubsection.
+
+
+\section{Citations}
+You can take a look into the \textit{bib.tex} file. There exists a set of papers, feel free to delete them all and start your own collection. You can also include multiple bib files in theory.
+
+\textit{@article{sutton1999between, \\
+	title={Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning}, \\
+	author={Sutton, Richard S and Precup, Doina and Singh, Satinder}, \\
+	journal={Artificial intelligence}, \\
+	volume={112}, \\
+	number={1-2}, \\
+	pages={181--211}, \\
+	year={1999}, \\
+	publisher={Elsevier} \\
+}}
+
+This would be an entry in the bib file for a paper. Most of the time you can actually find these entries where you got your paper from. 
+
+Each entry has a type - article, a name - sutton1999between, and a bunch of information.
+
+We can now cite this paper in our paper with the name of the entry and the \verb!"\cite{sutton1999between}"! command. If we were to cite Sutton in this context it would look like this: Something Sutton said \cite{sutton1999between}. 
+
+You can change the name, it is just a variable. Use something that helps you, though name and year are are a good go to. You can also look into the \textit{paper.bib} file for more examples.
+
+%If you don't like that it says SPS99 and instead want number, a) you are wrong b) look to where we imported the bib file in the main file towards the bottom and change the \\
+%\verb|"\bibliographystyle{alpha}"| to something boring like \textit{plain}. Or just google \textit{latex bibliography style} and you will find a list with different styles.
+
+One amazing part about latex and bib is that only the papers you cite will be part of your references. Also the order will be correct and only the required information for the given "bibliographystyle" \footnote{see the command near the end of the \textit{template.tex}} style will be displayed automatically.
+
+\section{Further Reading}
+If you got any question please ask them in the discussion forum.
+
+And if you want to read more on academic writing this is a great book\cite{zobel}
